@@ -16,6 +16,8 @@
     "express": "node src/express.js",
     "objects": "node src/objects.js",
     "mutations": "node src/mutations.js",
-    "auth": "node src/auth.js"
+    "auth": "node src/auth.js",
+    "ct:1": "node src/advanced/constructing-types-1.js",
+    "ct:2": "node src/advanced/constructing-types-2.js"
   }
 }
