@@ -1,19 +1,20 @@
 # Miscellaneous
+.atom/
+.buildlog/
+.DS_Store
+.history
+.svn/
 *.class
 *.log
 *.pyc
 *.swp
-.DS_Store
-.atom/
-.buildlog/
-.history
-.svn/
+node_modules
 
 # IntelliJ related
+.idea/
 *.iml
 *.ipr
 *.iws
-.idea/
 
 # VS Code
 .vscode/
