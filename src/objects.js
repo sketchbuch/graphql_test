@@ -1,6 +1,6 @@
-var express = require('express');
-var graphqlHTTP = require('express-graphql');
-var {buildSchema} = require('graphql');
+const express = require('express');
+const graphqlHTTP = require('express-graphql');
+const {buildSchema} = require('graphql');
 
 class RandomDie {
   constructor (numSides) {
@@ -12,8 +12,8 @@ class RandomDie {
   }
 
   roll({numRolls}) {
-    var output = [];
-    for (var i = 0; i < numRolls; i++) {
+    const output = [];
+    for (const i = 0; i < numRolls; i++) {
       output.push(this.rollOnce());
     }
     return output;
@@ -21,7 +21,7 @@ class RandomDie {
 }
 
 // Construct a schema, using GraphQL schema language
-var schema = buildSchema(`
+const schema = buildSchema(`
   type RandomDie {
     numSides: Int!
     rollOnce: Int!
@@ -37,7 +37,7 @@ var schema = buildSchema(`
 `);
 
 // The root provides a resolver function for each API endpoint
-var root = {
+const root = {
   borgMe: () => {
     return Math.random() < 0.5 ? 'Resistence is futile' : 'You will be one with the Borg';
   },
@@ -53,7 +53,7 @@ var root = {
   },
 };
 
-var app = express();
+const app = express();
 
 app.use('/graphql', graphqlHTTP({
   schema: schema,

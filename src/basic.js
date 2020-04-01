@@ -1,14 +1,14 @@
-var {graphql, buildSchema} = require('graphql');
+const {graphql, buildSchema} = require('graphql');
 
 // Construct a schema, using GraphQL schema language
-var schema = buildSchema(`
+const schema = buildSchema(`
   type Query {
     hello: String
   }
 `);
 
 // The root provides a resolver function for each API endpoint
-var root = {
+const root = {
   hello: () => {
     return 'Hello world!';
   },
