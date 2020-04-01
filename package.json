@@ -12,9 +12,10 @@
     "graphql": "^14.6.0"
   },
   "scripts": {
-    "1:basic": "node src/basic.js",
-    "2:express": "node src/express.js",
-    "3:objects": "node src/objects.js",
-    "4:mutations": "node src/mutations.js"
+    "basic": "node src/basic.js",
+    "express": "node src/express.js",
+    "objects": "node src/objects.js",
+    "mutations": "node src/mutations.js",
+    "auth": "node src/auth.js"
   }
 }
